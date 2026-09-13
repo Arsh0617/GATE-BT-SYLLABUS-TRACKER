@@ -1,4 +1,4 @@
-const CACHE_NAME = "gate-bt-2027-v3";
+const CACHE_NAME = "gate-bt-2027-v4";
 
 const STATIC_ASSETS = [
   "./",
