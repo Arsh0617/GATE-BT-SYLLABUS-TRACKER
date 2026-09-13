@@ -1311,7 +1311,7 @@
             });
 
             if ('serviceWorker' in navigator) {
-                navigator.serviceWorker.register('/GATE-BIOTECH-TRACKER/service-worker.js').catch(err => {
+                navigator.serviceWorker.register('./service-worker.js').catch(err => {
                     console.log('Service Worker registration failed:', err);
                 });
             }
