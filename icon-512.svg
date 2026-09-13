@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+<rect width="512" height="512" rx="86" fill="#1a472a"/>
+
+<!-- Outer cell / plasma membrane -->
+<path d="M256 75 C320 67 386 101 421 156 C455 211 452 280 423 338 C393 399 329 435 264 440 C196 444 130 413 96 359 C60 302 64 233 91 174 C122 112 188 79 256 75Z"
+fill="none" stroke="white" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+
+<!-- Nucleus -->
+<circle cx="243" cy="256" r="72" fill="white"/>
+<circle cx="243" cy="256" r="24" fill="#1a472a"/>
+
+<!-- Nuclear membrane accents -->
+<g fill="none" stroke="white" stroke-width="8" stroke-linecap="round">
+<path d="M163 219 C179 190 203 174 232 171"/>
+<path d="M168 309 C184 338 211 354 243 356"/>
+<path d="M307 193 C325 214 333 240 333 269"/>
+</g>
+
+<!-- Upper-left mitochondrion -->
+<path d="M116 142 C95 129 95 104 115 92 C140 79 171 92 178 116 C186 140 165 157 141 157 C130 157 122 151 116 142Z"
+fill="none" stroke="white" stroke-width="11" stroke-linecap="round"/>
+<path d="M114 115 C124 105 131 128 141 115 C151 101 157 124 167 117"
+fill="none" stroke="white" stroke-width="8" stroke-linecap="round"/>
+
+<!-- Lower-right mitochondrion -->
+<path d="M341 370 C321 357 321 332 341 319 C366 306 396 319 402 344 C408 368 388 388 364 389 C354 389 347 383 341 370Z"
+fill="none" stroke="white" stroke-width="11" stroke-linecap="round"/>
+<path d="M340 343 C350 332 357 355 367 342 C377 328 383 351 393 344"
+fill="none" stroke="white" stroke-width="8" stroke-linecap="round"/>
+
+<!-- Golgi apparatus -->
+<g fill="none" stroke="white" stroke-width="10" stroke-linecap="round">
+<path d="M325 156 C357 146 386 153 401 168"/>
+<path d="M318 177 C351 167 382 174 396 189"/>
+<path d="M312 198 C343 190 372 197 387 210"/>
+</g>
+
+<!-- Vesicles -->
+<g fill="white">
+<circle cx="136" cy="241" r="10"/>
+<circle cx="120" cy="298" r="9"/>
+<circle cx="189" cy="382" r="10"/>
+<circle cx="288" cy="115" r="10"/>
+<circle cx="370" cy="250" r="10"/>
+<circle cx="382" cy="285" r="8"/>
+<circle cx="296" cy="389" r="9"/>
+</g>
+</svg>

@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192">
+<rect width="192" height="192" rx="32" fill="#1a472a"/>
+
+<!-- Outer cell / plasma membrane -->
+<path d="M96 28 C120 25 145 38 158 59 C171 80 170 106 159 129 C148 151 126 164 101 165 C75 167 50 156 37 136 C23 114 25 88 35 66 C46 43 70 30 96 28Z"
+fill="none" stroke="white" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+
+<!-- Nucleus -->
+<circle cx="91" cy="96" r="27" fill="white"/>
+<circle cx="91" cy="96" r="9" fill="#1a472a"/>
+
+<!-- Nuclear membrane accents -->
+<g fill="none" stroke="white" stroke-width="3" stroke-linecap="round">
+<path d="M61 82 C67 71 76 65 87 64"/>
+<path d="M63 115 C69 127 79 133 91 133"/>
+<path d="M115 72 C122 80 126 90 126 101"/>
+</g>
+
+<!-- Upper-left mitochondrion -->
+<path d="M44 55 C36 50 36 40 44 35 C54 30 65 35 68 44 C71 53 63 59 54 59 C50 59 47 57 44 55Z"
+fill="none" stroke="white" stroke-width="4" stroke-linecap="round"/>
+<path d="M44 44 C48 40 50 49 54 44 C58 39 61 48 64 45"
+fill="none" stroke="white" stroke-width="3" stroke-linecap="round"/>
+
+<!-- Lower-right mitochondrion -->
+<path d="M129 138 C121 133 121 124 129 119 C138 114 149 119 151 128 C153 137 146 144 137 145 C133 145 131 143 129 138Z"
+fill="none" stroke="white" stroke-width="4" stroke-linecap="round"/>
+<path d="M129 128 C133 124 135 133 139 128 C143 123 145 132 149 129"
+fill="none" stroke="white" stroke-width="3" stroke-linecap="round"/>
+
+<!-- Golgi apparatus -->
+<g fill="none" stroke="white" stroke-width="4" stroke-linecap="round">
+<path d="M121 58 C133 54 144 57 150 63"/>
+<path d="M119 66 C132 62 143 65 148 71"/>
+<path d="M117 74 C129 71 140 74 145 79"/>
+</g>
+
+<!-- Vesicles -->
+<g fill="white">
+<circle cx="51" cy="91" r="4"/>
+<circle cx="45" cy="112" r="3.5"/>
+<circle cx="70" cy="144" r="4"/>
+<circle cx="108" cy="43" r="4"/>
+<circle cx="138" cy="94" r="4"/>
+<circle cx="143" cy="108" r="3"/>
+<circle cx="111" cy="145" r="3.5"/>
+</g>
+</svg>
