@@ -1,0 +1,1328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GATE 2027 Biotechnology Syllabus Tracker">
+    <meta name="theme-color" content="#1a472a">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="GATE Biotech">
+    <link rel="manifest" href="/GATE-BIOTECH-TRACKER/manifest.json">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%231a472a'/%3E%3Cellipse cx='50' cy='50' rx='29' ry='22' fill='none' stroke='white' stroke-width='5'/%3E%3Cellipse cx='50' cy='50' rx='22' ry='29' fill='none' stroke='white' stroke-width='5' transform='rotate(55 50 50)'/%3E%3Ccircle cx='50' cy='50' r='7' fill='white'/%3E%3Ccircle cx='33' cy='43' r='3' fill='white'/%3E%3Ccircle cx='67' cy='58' r='3' fill='white'/%3E%3C/svg%3E">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'%3E%3Crect width='192' height='192' rx='42' fill='%231a472a'/%3E%3Cellipse cx='96' cy='96' rx='56' ry='42' fill='none' stroke='white' stroke-width='9'/%3E%3Cellipse cx='96' cy='96' rx='42' ry='56' fill='none' stroke='white' stroke-width='9' transform='rotate(55 96 96)'/%3E%3Ccircle cx='96' cy='96' r='13' fill='white'/%3E%3Ccircle cx='62' cy='82' r='6' fill='white'/%3E%3Ccircle cx='130' cy='113' r='6' fill='white'/%3E%3C/svg%3E">
+    <title>GATE 2027 Biotechnology - Syllabus Tracker</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --deep-green: #1a472a;
+            --vibrant-green: #2d6a4f;
+            --light-green: #40916c;
+            --accent-green: #52b788;
+            --bg-light: #f1faee;
+            --text-dark: #081c15;
+            --text-light: #555;
+            --border-light: #d8f3dc;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.12);
+            --shadow-lg: 0 8px 24px rgba(0,0,0,0.15);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        html, body {
+            height: 100%;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: white;
+            color: var(--text-dark);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--deep-green) 0%, var(--vibrant-green) 100%);
+            color: white;
+            padding: 20px 16px;
+            text-align: center;
+            box-shadow: var(--shadow-md);
+            flex-shrink: 0;
+        }
+
+        .header h1 {
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+        }
+
+        .header .subtitle {
+            font-size: 21px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .header .tagline {
+            font-size: 11px;
+            opacity: 0.9;
+            letter-spacing: 1px;
+            font-weight: 500;
+        }
+
+        .nav-tabs {
+            display: flex;
+            background: white;
+            border-bottom: 1px solid var(--border-light);
+            flex-shrink: 0;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .nav-tabs button {
+            flex: 1;
+            min-width: 100px;
+            padding: 14px 16px;
+            border: none;
+            background: none;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--text-light);
+            border-bottom: 3px solid transparent;
+            transition: var(--transition);
+            white-space: nowrap;
+        }
+
+        .nav-tabs button.active {
+            color: var(--deep-green);
+            border-bottom-color: var(--deep-green);
+        }
+
+        .nav-tabs button:hover {
+            color: var(--vibrant-green);
+        }
+
+        .container {
+            flex: 1;
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+            padding-bottom: 20px;
+        }
+
+        .view {
+            display: none;
+            animation: fadeIn 0.3s ease-in;
+        }
+
+        .view.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .dashboard-content {
+            padding: 20px 16px;
+        }
+
+        .progress-card {
+            background: white;
+            border: 1px solid var(--border-light);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 20px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .progress-stat {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+
+        .progress-stat:last-child {
+            margin-bottom: 0;
+        }
+
+        .progress-stat-label {
+            font-size: 13px;
+            color: var(--text-light);
+            font-weight: 500;
+        }
+
+        .progress-stat-value {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--deep-green);
+        }
+
+        .progress-bar-container {
+            width: 100%;
+            height: 6px;
+            background: var(--border-light);
+            border-radius: 3px;
+            overflow: hidden;
+            margin-top: 12px;
+        }
+
+        .progress-bar-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--vibrant-green), var(--deep-green));
+            border-radius: 3px;
+            transition: width 0.4s ease;
+            width: 0%;
+        }
+
+        .section-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .section-mini-card {
+            background: var(--bg-light);
+            border: 1px solid var(--border-light);
+            border-radius: 10px;
+            padding: 12px;
+            text-align: center;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .section-mini-card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-sm);
+            border-color: var(--deep-green);
+        }
+
+        .section-mini-card-number {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--deep-green);
+            margin-bottom: 4px;
+        }
+
+        .section-mini-card-name {
+            font-size: 12px;
+            color: var(--text-dark);
+            font-weight: 500;
+            margin-bottom: 8px;
+            line-height: 1.3;
+        }
+
+        .section-mini-card-progress {
+            font-size: 11px;
+            color: var(--text-light);
+            margin-bottom: 6px;
+        }
+
+        .section-mini-card-bar {
+            height: 4px;
+            background: var(--border-light);
+            border-radius: 2px;
+            overflow: hidden;
+        }
+
+        .section-mini-card-bar-fill {
+            height: 100%;
+            background: var(--deep-green);
+            transition: width 0.3s ease;
+        }
+
+        .syllabus-content {
+            padding: 16px;
+        }
+
+        .controls {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 10px 14px;
+            border: 1px solid var(--border-light);
+            border-radius: 8px;
+            background: white;
+            color: var(--text-dark);
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: 500;
+            transition: var(--transition);
+            white-space: nowrap;
+        }
+
+        .btn:hover {
+            border-color: var(--deep-green);
+            color: var(--deep-green);
+        }
+
+        .btn.active {
+            background: var(--deep-green);
+            color: white;
+            border-color: var(--deep-green);
+        }
+
+        .search-box {
+            display: flex;
+            margin-bottom: 16px;
+        }
+
+        .search-box input {
+            flex: 1;
+            padding: 12px 14px;
+            border: 1px solid var(--border-light);
+            border-radius: 8px;
+            font-size: 14px;
+            font-family: inherit;
+            transition: var(--transition);
+        }
+
+        .search-box input:focus {
+            outline: none;
+            border-color: var(--deep-green);
+            box-shadow: 0 0 0 3px rgba(26, 71, 42, 0.1);
+        }
+
+        .sections-container {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .section-card {
+            background: white;
+            border: 1px solid var(--border-light);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .section-card:hover {
+            box-shadow: var(--shadow-md);
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px;
+            cursor: pointer;
+            user-select: none;
+            background: white;
+            transition: var(--transition);
+        }
+
+        .section-card.expanded .section-header {
+            background: var(--bg-light);
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .section-header:hover {
+            background: var(--bg-light);
+        }
+
+        .section-info {
+            flex: 1;
+        }
+
+        .section-number {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--deep-green);
+            margin-bottom: 2px;
+        }
+
+        .section-name {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+        }
+
+        .section-stats {
+            font-size: 12px;
+            color: var(--text-light);
+            margin-bottom: 6px;
+        }
+
+        .section-progress-bar {
+            height: 4px;
+            background: var(--border-light);
+            border-radius: 2px;
+            overflow: hidden;
+            width: 60px;
+        }
+
+        .section-progress-bar-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--vibrant-green), var(--deep-green));
+            transition: width 0.3s ease;
+        }
+
+        .section-chevron {
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-light);
+            transition: var(--transition);
+            margin-left: 12px;
+            flex-shrink: 0;
+        }
+
+        .section-card.expanded .section-chevron {
+            transform: rotate(180deg);
+            color: var(--deep-green);
+        }
+
+        .section-topics {
+            display: none;
+            padding: 16px;
+            background: white;
+            border-top: 1px solid var(--border-light);
+        }
+
+        .section-card.expanded .section-topics {
+            display: block;
+            animation: slideDown 0.3s ease;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-8px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .topic-item {
+            display: flex;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border-light);
+            transition: var(--transition);
+        }
+
+        .topic-item:last-child {
+            border-bottom: none;
+        }
+
+        .topic-item.completed .topic-label {
+            color: var(--text-light);
+            text-decoration: line-through;
+        }
+
+        .topic-checkbox {
+            width: 20px;
+            height: 20px;
+            min-width: 20px;
+            margin-right: 12px;
+            cursor: pointer;
+            accent-color: var(--deep-green);
+            -webkit-appearance: none;
+            appearance: none;
+            border: 2px solid var(--border-light);
+            border-radius: 4px;
+            background: white;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .topic-checkbox:hover {
+            border-color: var(--deep-green);
+        }
+
+        .topic-checkbox:checked {
+            background: var(--deep-green);
+            border-color: var(--deep-green);
+        }
+
+        .topic-checkbox:checked::after {
+            content: '✓';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .topic-checkbox:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(26, 71, 42, 0.2);
+        }
+
+        .topic-label {
+            flex: 1;
+            font-size: 14px;
+            color: var(--text-dark);
+            cursor: pointer;
+            user-select: none;
+            line-height: 1.4;
+        }
+
+        .search-results-empty {
+            text-align: center;
+            padding: 40px 20px;
+            color: var(--text-light);
+        }
+
+        .search-results-empty-icon {
+            font-size: 48px;
+            margin-bottom: 16px;
+        }
+
+        .progress-content {
+            padding: 20px 16px;
+        }
+
+        .progress-section {
+            background: white;
+            border: 1px solid var(--border-light);
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 16px;
+        }
+
+        .progress-section-title {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text-light);
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .progress-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            font-size: 14px;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .progress-item:last-child {
+            border-bottom: none;
+        }
+
+        .progress-item-count {
+            color: var(--text-light);
+            font-size: 13px;
+        }
+
+        .progress-item-count strong {
+            color: var(--deep-green);
+            font-weight: 600;
+        }
+
+        .reset-section {
+            margin-top: 20px;
+        }
+
+        .reset-button {
+            width: 100%;
+            padding: 12px;
+            background: white;
+            border: 2px solid #ef4444;
+            color: #ef4444;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 14px;
+            transition: var(--transition);
+        }
+
+        .reset-button:hover {
+            background: #fef2f2;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+            padding: 16px;
+        }
+
+        .modal.active {
+            display: flex;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .modal-content {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            max-width: 400px;
+            width: 100%;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .modal-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--text-dark);
+        }
+
+        .modal-message {
+            font-size: 14px;
+            color: var(--text-light);
+            margin-bottom: 24px;
+            line-height: 1.6;
+        }
+
+        .modal-buttons {
+            display: flex;
+            gap: 12px;
+            justify-content: flex-end;
+        }
+
+        .modal-btn {
+            padding: 10px 16px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 14px;
+            transition: var(--transition);
+        }
+
+        .modal-btn-cancel {
+            background: var(--bg-light);
+            color: var(--text-dark);
+        }
+
+        .modal-btn-cancel:hover {
+            background: #e8e8e8;
+        }
+
+        .modal-btn-confirm {
+            background: #ef4444;
+            color: white;
+        }
+
+        .modal-btn-confirm:hover {
+            background: #dc2626;
+        }
+
+        @media (max-width: 600px) {
+            .header .subtitle {
+                font-size: 20px;
+            }
+
+            .section-grid {
+                grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+            }
+
+            .section-header {
+                padding: 14px;
+            }
+
+            .controls {
+                gap: 6px;
+            }
+
+            .btn {
+                padding: 8px 12px;
+                font-size: 12px;
+            }
+
+            .nav-tabs button {
+                font-size: 12px;
+                padding: 12px 12px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .header {
+                padding: 16px 12px;
+            }
+
+            .header .subtitle {
+                font-size: 18px;
+            }
+
+            .controls {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+            }
+
+            .section-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>GATE 2027</h1>
+        <div class="subtitle">BIOTECHNOLOGY (BT)</div>
+        <div style="margin-top: 12px; font-size: 11px; letter-spacing: 1.5px;">SYLLABUS TRACKER</div>
+        <div class="tagline" style="margin-top: 8px;">STUDY • TRACK • SUCCEED • PASS</div>
+    </div>
+
+    <div class="nav-tabs">
+        <button class="nav-btn active" data-view="dashboard">Dashboard</button>
+        <button class="nav-btn" data-view="syllabus">Syllabus</button>
+        <button class="nav-btn" data-view="progress">Progress</button>
+    </div>
+
+    <div class="container">
+        <div id="dashboard" class="view active">
+            <div class="dashboard-content">
+                <div class="progress-card">
+                    <div class="progress-stat">
+                        <span class="progress-stat-label">Overall Progress</span>
+                        <span class="progress-stat-value"><span id="completed-count">0</span>/<span id="total-count">143</span></span>
+                    </div>
+                    <div class="progress-stat">
+                        <span class="progress-stat-label">Completion Rate</span>
+                        <span class="progress-stat-value"><span id="progress-percentage">0</span>%</span>
+                    </div>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar-fill" id="main-progress-bar"></div>
+                    </div>
+                </div>
+
+                <div class="progress-card">
+                    <div class="progress-stat">
+                        <span class="progress-stat-label">Sections Completed</span>
+                        <span class="progress-stat-value"><span id="completed-sections">0</span>/6</span>
+                    </div>
+                    <div class="progress-stat">
+                        <span class="progress-stat-label">Remaining Topics</span>
+                        <span class="progress-stat-value"><span id="remaining-topics">143</span></span>
+                    </div>
+                </div>
+
+                <h3 style="font-size: 14px; font-weight: 600; margin: 20px 0 12px; color: var(--text-dark);">Section Overview</h3>
+                <div class="section-grid" id="dashboard-sections"></div>
+            </div>
+        </div>
+
+        <div id="syllabus" class="view">
+            <div class="syllabus-content">
+                <div class="search-box">
+                    <input type="text" id="search-input" placeholder="Search syllabus topics…" aria-label="Search topics">
+                </div>
+
+                <div class="controls">
+                    <button class="btn active" data-filter="all">All Topics</button>
+                    <button class="btn" data-filter="completed">Completed</button>
+                    <button class="btn" data-filter="pending">Pending</button>
+                    <button class="btn" id="expand-all-btn">Expand All</button>
+                    <button class="btn" id="collapse-all-btn">Collapse All</button>
+                </div>
+
+                <div id="sections-container" class="sections-container"></div>
+                <div id="search-empty" class="search-results-empty" style="display: none;">
+                    <div class="search-results-empty-icon">🔍</div>
+                    <p>No topics found</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="progress" class="view">
+            <div class="progress-content">
+                <div class="progress-section">
+                    <div class="progress-section-title">Overall Progress</div>
+                    <div class="progress-item">
+                        <span>Topics Completed</span>
+                        <span class="progress-item-count"><strong id="prog-completed">0</strong> / 143</span>
+                    </div>
+                    <div class="progress-item">
+                        <span>Completion Percentage</span>
+                        <span class="progress-item-count"><strong id="prog-percentage">0</strong>%</span>
+                    </div>
+                </div>
+
+                <div class="progress-section" id="progress-sections"></div>
+
+                <div class="reset-section">
+                    <button class="reset-button" id="reset-btn">Reset All Progress</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="reset-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-title">Reset Progress?</div>
+            <div class="modal-message">Are you sure you want to reset all GATE 2027 Biotechnology progress? This cannot be undone.</div>
+            <div class="modal-buttons">
+                <button class="modal-btn modal-btn-cancel" id="modal-cancel">Cancel</button>
+                <button class="modal-btn modal-btn-confirm" id="modal-confirm">Reset All</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const SYLLABUS_DATA = [
+    {
+        id: 1,
+        name: "Engineering Mathematics",
+        topics: [
+            { id: "s1_t1", name: "Linear Algebra - Matrices and determinants" },
+            { id: "s1_t2", name: "Linear Algebra - Systems of linear equations" },
+            { id: "s1_t3", name: "Linear Algebra - Eigen values and Eigen vectors" },
+            { id: "s1_t4", name: "Calculus - Multivariable calculus (limits, continuity, and differentiability)" },
+            { id: "s1_t5", name: "Calculus - Partial derivatives, maxima and minima" },
+            { id: "s1_t6", name: "Calculus - Sequences and series; Test for convergence" },
+            { id: "s1_t7", name: "Calculus - Multivariable calculus: Gradient, divergence, and curl (for applications in fluid mechanics, transport processes, etc.)" },
+            { id: "s1_t8", name: "Differential Equations - Linear and nonlinear first order ODEs" },
+            { id: "s1_t9", name: "Differential Equations - Higher order ODEs with constant coefficients" },
+            { id: "s1_t10", name: "Differential Equations - Cauchy’s and Euler’s equations" },
+            { id: "s1_t11", name: "Differential Equations - Laplace transforms" },
+            { id: "s1_t12", name: "Probability and Statistics - Mean, median, mode and standard deviation" },
+            { id: "s1_t13", name: "Probability and Statistics - Random variables" },
+            { id: "s1_t14", name: "Probability and Statistics - Poisson, normal and binomial distributions" },
+            { id: "s1_t15", name: "Probability and Statistics - Correlation and regression analysis" },
+            { id: "s1_t16", name: "Probability and Statistics - Bayesian Statistics" },
+            { id: "s1_t17", name: "Numerical Methods - Solution of linear and nonlinear algebraic equations" },
+            { id: "s1_t18", name: "Numerical Methods - Integration by trapezoidal and Simpson’s rule" },
+            { id: "s1_t19", name: "Numerical Methods - Single step method for differential equations" }
+        ]
+    },
+    {
+        id: 2,
+        name: "General Biology",
+        topics: [
+            { id: "s2_t1", name: "Biochemistry - Biomolecules - structure and function" },
+            { id: "s2_t2", name: "Biochemistry - Biological membranes - structure, membrane channels and pumps, molecular motors, action potential and transport processes" },
+            { id: "s2_t3", name: "Biochemistry - Basic concepts and regulation of metabolism of carbohydrates, lipids, amino acids and nucleic acids" },
+            { id: "s2_t4", name: "Biochemistry - Metabolism: Regulation of metabolism of carbohydrates, lipids, amino acids, and nucleic acids" },
+            { id: "s2_t5", name: "Biochemistry - Detailed pathways like glycolysis, citric acid cycle, and fatty acid oxidation" },
+            { id: "s2_t6", name: "Biochemistry - Photosynthesis, respiration and electron transport chain" },
+            { id: "s2_t7", name: "Biochemistry - Enzymes - Classification, catalytic and regulatory strategies" },
+            { id: "s2_t8", name: "Biochemistry - Enzyme kinetics - Michaelis-Menten equation" },
+            { id: "s2_t9", name: "Biochemistry - Enzyme inhibition - competitive, non-competitive and uncompetitive inhibition" },
+            { id: "s2_t10", name: "Microbiology - History of Microbiology, Bacterial classification and diversity" },
+            { id: "s2_t11", name: "Microbiology - Bacterial cell wall composition" },
+            { id: "s2_t12", name: "Microbiology - Gram positive and Gram-negative bacteria, Archea, Methods in microbiology" },
+            { id: "s2_t13", name: "Microbiology - Microbial growth and nutrition" },
+            { id: "s2_t14", name: "Microbiology - Operon- Lac, Trp and Ara operon, Nitrogen fixation" },
+            { id: "s2_t15", name: "Microbiology - Microbial diseases and host-pathogen interactions" },
+            { id: "s2_t16", name: "Microbiology - Antibiotics and antimicrobial resistance, Two-component system (TCS), bacterial communication, Viruses - structure and classification" },
+            { id: "s2_t17", name: "Immunology - Primary and Secondary lymphoid organs" },
+            { id: "s2_t18", name: "Immunology - Innate immunity and Inflammation" },
+            { id: "s2_t19", name: "Immunology - Cytokines and Chemokines" },
+            { id: "s2_t20", name: "Immunology - Complement system" },
+            { id: "s2_t21", name: "Immunology - Effector responses: Cellular and Humoral Immunity" },
+            { id: "s2_t22", name: "Immunology - Molecular basis of Antibody diversity and function" },
+            { id: "s2_t23", name: "Immunology - Polyclonal and Monoclonal antibodies" },
+            { id: "s2_t24", name: "Immunology - T-cell and B-cell development" },
+            { id: "s2_t25", name: "Immunology - Memory responses" },
+            { id: "s2_t26", name: "Immunology - Major Histocompatibility complex (MHC)" },
+            { id: "s2_t27", name: "Immunology - Antigen processing and presentation" },
+            { id: "s2_t28", name: "Immunology - Regulation of immune responses" },
+            { id: "s2_t29", name: "Immunology - Immune tolerance" },
+            { id: "s2_t30", name: "Immunology - Hypersensitivity" },
+            { id: "s2_t31", name: "Immunology - Autoimmunity and Immunodeficiency" },
+            { id: "s2_t32", name: "Immunology - Graft vs Host disease" },
+            { id: "s2_t33", name: "Immunology - Immunization and vaccines" }
+        ]
+    },
+    {
+        id: 3,
+        name: "Genetics, Cellular and Molecular Biology",
+        topics: [
+            { id: "s3_t1", name: "Genetics and Evolutionary Biology - Mendelian inheritance" },
+            { id: "s3_t2", name: "Genetics and Evolutionary Biology - Gene interaction" },
+            { id: "s3_t3", name: "Genetics and Evolutionary Biology - Complementation" },
+            { id: "s3_t4", name: "Genetics and Evolutionary Biology - Linkage, recombination and chromosome mapping" },
+            { id: "s3_t5", name: "Genetics and Evolutionary Biology - Extra chromosomal inheritance" },
+            { id: "s3_t6", name: "Genetics and Evolutionary Biology - Microbial genetics - transformation, transduction and conjugation" },
+            { id: "s3_t7", name: "Genetics and Evolutionary Biology - Bacterial gene mapping" },
+            { id: "s3_t8", name: "Genetics and Evolutionary Biology - Horizontal gene transfer and transposable elements" },
+            { id: "s3_t9", name: "Genetics and Evolutionary Biology - Chromosomal variation" },
+            { id: "s3_t10", name: "Genetics and Evolutionary Biology - Sex Determination" },
+            { id: "s3_t11", name: "Genetics and Evolutionary Biology - Genetic disorders" },
+            { id: "s3_t12", name: "Genetics and Evolutionary Biology - Population genetics" },
+            { id: "s3_t13", name: "Genetics and Evolutionary Biology - Epigenetics" },
+            { id: "s3_t14", name: "Genetics and Evolutionary Biology - Selection and inheritance" },
+            { id: "s3_t15", name: "Genetics and Evolutionary Biology - Adaptive and neutral evolution" },
+            { id: "s3_t16", name: "Genetics and Evolutionary Biology - Genetic drift" },
+            { id: "s3_t17", name: "Genetics and Evolutionary Biology - Species and speciation" },
+            { id: "s3_t18", name: "Cell Biology - Eukaryotic cell structure" },
+            { id: "s3_t19", name: "Cell Biology - Cell cycle and cell growth control" },
+            { id: "s3_t20", name: "Cell Biology - Cell-cell communication" },
+            { id: "s3_t21", name: "Cell Biology - Cell signalling and signal transduction" },
+            { id: "s3_t22", name: "Cell Biology - Non-cell autonomous cell signalling" },
+            { id: "s3_t23", name: "Cell Biology - Post-translational modifications" },
+            { id: "s3_t24", name: "Cell Biology - Protein trafficking" },
+            { id: "s3_t25", name: "Cell Biology - Cell death and autophagy" },
+            { id: "s3_t26", name: "Cell Biology - Extra-cellular matrix" },
+            { id: "s3_t27", name: "Molecular Biology - Molecular structure of genes and chromosomes" },
+            { id: "s3_t28", name: "Molecular Biology - Mutations and mutagenesis" },
+            { id: "s3_t29", name: "Molecular Biology - Regulation of gene expression" },
+            { id: "s3_t30", name: "Molecular Biology - Nucleic acid - replication, transcription, splicing, translation and their regulatory mechanisms" },
+            { id: "s3_t31", name: "Molecular Biology - Non-coding and micro RNA" },
+            { id: "s3_t32", name: "Molecular Biology - RNA interference" },
+            { id: "s3_t33", name: "Molecular Biology - DNA damage and repair" }
+        ]
+    },
+    {
+        id: 4,
+        name: "Fundamentals of Biological Engineering",
+        topics: [
+            { id: "s4_t1", name: "Bioreaction Engineering - Rate law, zero and first order kinetics" },
+            { id: "s4_t2", name: "Bioreaction Engineering - More advanced kinetic models, including Michaelis-Menten kinetics for enzyme reactions. Inhibition kinetics: Competitive, non-competitive, and uncompetitive inhibition in enzyme catalysis" },
+            { id: "s4_t3", name: "Bioreaction Engineering - Ideal reactors - batch, mixed flow and plug flow" },
+            { id: "s4_t4", name: "Bioreaction Engineering - Enzyme immobilization, diffusion effects - Thiele modulus, effectiveness factor, Damkoehler number" },
+            { id: "s4_t5", name: "Bioreaction Engineering - Kinetics of cell growth, substrate utilization and product formation" },
+            { id: "s4_t6", name: "Bioreaction Engineering - Structured and unstructured models" },
+            { id: "s4_t7", name: "Bioreaction Engineering - Batch, fed-batch and continuous processes" },
+            { id: "s4_t8", name: "Bioreaction Engineering - Microbial and enzyme reactors" },
+            { id: "s4_t9", name: "Bioreaction Engineering - Optimization and scale up (Design and operation of microbial reactors (e.g., fermentation reactors) and enzyme reactors (e.g., immobilized enzyme systems)" },
+            { id: "s4_t10", name: "Bioreaction Engineering - Case studies on the use of microbial reactors in large-scale production (e.g., antibiotics, biofuels)" },
+            { id: "s4_t11", name: "Upstream and Downstream Processing - Media formulation and optimization" },
+            { id: "s4_t12", name: "Upstream and Downstream Processing - Sterilization of air and media" },
+            { id: "s4_t13", name: "Upstream and Downstream Processing - Filtration - membrane filtration, ultra filtration" },
+            { id: "s4_t14", name: "Upstream and Downstream Processing - Centrifugation - high speed and ultra" },
+            { id: "s4_t15", name: "Upstream and Downstream Processing - Cell disruption" },
+            { id: "s4_t16", name: "Upstream and Downstream Processing - Principles of chromatography - ion exchange, gel filtration, hydrophobic interaction, affinity, GC, HPLC and FPLC" },
+            { id: "s4_t17", name: "Upstream and Downstream Processing - Extraction, adsorption and drying" },
+            { id: "s4_t18", name: "Upstream and Downstream Processing - Measurement devices" },
+            { id: "s4_t19", name: "Upstream and Downstream Processing - Valves" },
+            { id: "s4_t20", name: "Upstream and Downstream Processing - First order and second order systems" },
+            { id: "s4_t21", name: "Upstream and Downstream Processing - Feedback and feed forward control" },
+            { id: "s4_t22", name: "Upstream and Downstream Processing - Types of controllers – proportional, derivative and integral control" },
+            { id: "s4_t23", name: "Upstream and Downstream Processing - Tuning of controllers" }
+        ]
+    },
+    {
+        id: 5,
+        name: "Plant, Animal and Microbial Biotechnology",
+        topics: [
+            { id: "s5_t1", name: "Plants - Totipotency" },
+            { id: "s5_t2", name: "Plants - Cell fate transition, direct and indirect organogenesis, regeneration of plants" },
+            { id: "s5_t3", name: "Plants - Plant growth regulators and elicitors" },
+            { id: "s5_t4", name: "Plants - Tissue culture and cell suspension culture system - methodology, kinetics of growth and nutrient optimization" },
+            { id: "s5_t5", name: "Plants - Production of secondary metabolites" },
+            { id: "s5_t6", name: "Plants - Hairy root culture" },
+            { id: "s5_t7", name: "Plants - Plant products of industrial importance" },
+            { id: "s5_t8", name: "Plants - Artificial seeds" },
+            { id: "s5_t9", name: "Plants - Somaclonal variation" },
+            { id: "s5_t10", name: "Plants - Protoplast, protoplast fusion - somatic hybrid and cybrid" },
+            { id: "s5_t11", name: "Plants - Transgenic plants - direct and indirect methods of gene transfer techniques" },
+            { id: "s5_t12", name: "Plants - Selection marker and reporter gene" },
+            { id: "s5_t13", name: "Plants - Plastid transformation" },
+            { id: "s5_t14", name: "Animals - Culture media composition and growth conditions" },
+            { id: "s5_t15", name: "Animals - Animal cell and tissue preservation" },
+            { id: "s5_t16", name: "Animals - Anchorage and non-anchorage dependent cell culture" },
+            { id: "s5_t17", name: "Animals - Kinetics of cell growth" },
+            { id: "s5_t18", name: "Animals - Micro & macro-carrier culture" },
+            { id: "s5_t19", name: "Animals - Hybridoma technology" },
+            { id: "s5_t20", name: "Animals - Stem cell technology" },
+            { id: "s5_t21", name: "Animals - Animal cloning" },
+            { id: "s5_t22", name: "Animals - Transgenic animals" },
+            { id: "s5_t23", name: "Animals - Knock-out and knock-in animals" },
+            { id: "s5_t24", name: "Microbes - Production of biomass and primary/secondary metabolites - Biofuels, bioplastics, industrial enzymes, antibiotics" },
+            { id: "s5_t25", name: "Microbes - Large scale production and purification of recombinant proteins and metabolites" },
+            { id: "s5_t26", name: "Microbes - Clinical-, food- and industrial- microbiology" },
+            { id: "s5_t27", name: "Microbes - Screening strategies for new products" }
+        ]
+    },
+    {
+        id: 6,
+        name: "Recombinant DNA technology and Other Tools in Biotechnology",
+        topics: [
+            { id: "s6_t1", name: "Recombinant DNA technology - Restriction and modification enzymes" },
+            { id: "s6_t2", name: "Recombinant DNA technology - Vectors - plasmids, bacteriophage and other viral vectors, cosmids, Ti plasmid, bacterial and yeast artificial chromosomes" },
+            { id: "s6_t3", name: "Recombinant DNA technology - Expression vectors" },
+            { id: "s6_t4", name: "Recombinant DNA technology - cDNA and genomic DNA library Gene isolation and cloning, strategies for production of recombinant proteins" },
+            { id: "s6_t5", name: "Recombinant DNA technology - Transposons and gene targeting" },
+            { id: "s6_t6", name: "Recombinant DNA technology - Recombination-based gene cloning" },
+            { id: "s6_t7", name: "Molecular tools - Polymerase chain reaction" },
+            { id: "s6_t8", name: "Molecular tools - DNA/RNA labelling and Sangers and next generation sequencing" },
+            { id: "s6_t9", name: "Molecular tools - Southern and northern blotting" },
+            { id: "s6_t10", name: "Molecular tools - In-situ hybridization" },
+            { id: "s6_t11", name: "Molecular tools - DNA fingerprinting, RAPD, RFLP" },
+            { id: "s6_t12", name: "Molecular tools - Site-directed mutagenesis" },
+            { id: "s6_t13", name: "Molecular tools - CRISPR-Cas" },
+            { id: "s6_t14", name: "Molecular tools - Biosensing and biosensors" },
+            { id: "s6_t15", name: "Molecular tools - DNA-protein and protein-protein interaction tools" },
+            { id: "s6_t16", name: "Molecular tools - Genomics and proteomics-based approaches" },
+            { id: "s6_t17", name: "Analytical tools - Principles of microscopy - light, electron, fluorescence and confocal" },
+            { id: "s6_t18", name: "Analytical tools - Principles of spectroscopy- UV, visible, fluorescence, CD, IR, FT-IR, MS, NMR" },
+            { id: "s6_t19", name: "Analytical tools - Electrophoresis" },
+            { id: "s6_t20", name: "Analytical tools - Micro- arrays" },
+            { id: "s6_t21", name: "Analytical tools - Enzymatic assays" },
+            { id: "s6_t22", name: "Analytical tools - Immunoassays - ELISA, RIA, immunohistochemistry" },
+            { id: "s6_t23", name: "Analytical tools - Immunoblotting" },
+            { id: "s6_t24", name: "Analytical tools - Flow cytometry" },
+            { id: "s6_t25", name: "Analytical tools - Whole genome and ChIP sequencing" },
+            { id: "s6_t26", name: "Computational tools - Bioinformatics resources and search tools" },
+            { id: "s6_t27", name: "Computational tools - Sequence and structure databases" },
+            { id: "s6_t28", name: "Computational tools - Sequence analysis - sequence file formats, scoring matrices, alignment, phylogeny" },
+            { id: "s6_t29", name: "Computational tools - Genomics, proteomics, metabolomics" },
+            { id: "s6_t30", name: "Computational tools - Gene prediction" },
+            { id: "s6_t31", name: "Computational tools - Functional annotation" },
+            { id: "s6_t32", name: "Computational tools - Secondary structure and 3D structure prediction" },
+            { id: "s6_t33", name: "Computational tools - Knowledge discovery in biochemical databases" },
+            { id: "s6_t34", name: "Computational tools - Metagenomics" },
+            { id: "s6_t35", name: "Computational tools - Metabolic engineering and systems biology" }
+        ]
+    }
+];
+
+        const STORAGE_KEY = 'gate_biotech_progress';
+        let completedTopics = new Set();
+        let currentFilter = 'all';
+
+        function loadProgress() {
+            const saved = localStorage.getItem(STORAGE_KEY);
+            if (saved) {
+                try {
+                    completedTopics = new Set(JSON.parse(saved));
+                } catch (e) {
+                    completedTopics = new Set();
+                }
+            }
+        }
+
+        function saveProgress() {
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(Array.from(completedTopics)));
+        }
+
+        function getStats() {
+            const totalTopics = SYLLABUS_DATA.reduce((sum, s) => sum + s.topics.length, 0);
+            const completedCount = completedTopics.size;
+            const percentage = totalTopics > 0 ? Math.round((completedCount / totalTopics) * 100) : 0;
+
+            return {
+                total: totalTopics,
+                completed: completedCount,
+                remaining: totalTopics - completedCount,
+                percentage,
+                completedSections: SYLLABUS_DATA.filter(s => 
+                    s.topics.every(t => completedTopics.has(t.id))
+                ).length
+            };
+        }
+
+        function getSectionStats(section) {
+            const total = section.topics.length;
+            const completed = section.topics.filter(t => completedTopics.has(t.id)).length;
+            const percentage = total > 0 ? Math.round((completed / total) * 100) : 0;
+            return { total, completed, percentage };
+        }
+
+        function updateAllProgress() {
+            const stats = getStats();
+
+            document.getElementById('completed-count').textContent = stats.completed;
+            document.getElementById('total-count').textContent = stats.total;
+            document.getElementById('progress-percentage').textContent = stats.percentage;
+            document.getElementById('main-progress-bar').style.width = stats.percentage + '%';
+            document.getElementById('completed-sections').textContent = stats.completedSections;
+            document.getElementById('remaining-topics').textContent = stats.remaining;
+
+            document.getElementById('prog-completed').textContent = stats.completed;
+            document.getElementById('prog-percentage').textContent = stats.percentage;
+
+            SYLLABUS_DATA.forEach(section => {
+                const sectionStats = getSectionStats(section);
+                const card = document.querySelector(`[data-section-id="${section.id}"]`);
+                if (card) {
+                    card.querySelector('.section-mini-card-progress').textContent = 
+                        `${sectionStats.completed} / ${sectionStats.total}`;
+                    card.querySelector('.section-mini-card-bar-fill').style.width = 
+                        sectionStats.percentage + '%';
+                }
+            });
+
+            SYLLABUS_DATA.forEach(section => {
+                const sectionStats = getSectionStats(section);
+                const card = document.querySelector(`[data-section-card="${section.id}"]`);
+                if (card) {
+                    card.querySelector('.section-stats').textContent = 
+                        `${sectionStats.completed} / ${sectionStats.total} completed (${sectionStats.percentage}%)`;
+                    card.querySelector('.section-progress-bar-fill').style.width = 
+                        sectionStats.percentage + '%';
+                }
+            });
+
+            updateProgressView();
+        }
+
+        function updateProgressView() {
+            const container = document.getElementById('progress-sections');
+            if (!container) return;
+
+            let html = '<div class="progress-section"><div class="progress-section-title">Section Progress</div>';
+
+            SYLLABUS_DATA.forEach(section => {
+                const stats = getSectionStats(section);
+                html += `<div class="progress-item">
+                    <span>Section ${section.id} — ${section.name}</span>
+                    <span class="progress-item-count"><strong>${stats.completed}</strong>/${stats.total}</span>
+                </div>`;
+            });
+
+            html += '</div>';
+            container.innerHTML = html;
+        }
+
+        function renderDashboard() {
+            const container = document.getElementById('dashboard-sections');
+            if (!container) return;
+
+            container.innerHTML = SYLLABUS_DATA.map(section => {
+                const stats = getSectionStats(section);
+                return `
+                    <div class="section-mini-card" data-section-id="${section.id}" data-view="syllabus">
+                        <div class="section-mini-card-number">0${section.id}</div>
+                        <div class="section-mini-card-name">${section.name}</div>
+                        <div class="section-mini-card-progress">${stats.completed} / ${stats.total}</div>
+                        <div class="section-mini-card-bar">
+                            <div class="section-mini-card-bar-fill" style="width: ${stats.percentage}%"></div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+
+            document.querySelectorAll('.section-mini-card').forEach(card => {
+                card.addEventListener('click', () => {
+                    switchView(card.getAttribute('data-view'));
+                });
+            });
+        }
+
+        function renderSyllabus() {
+            const container = document.getElementById('sections-container');
+            if (!container) return;
+
+            container.innerHTML = SYLLABUS_DATA.map(section => {
+                const stats = getSectionStats(section);
+                const topicsHtml = section.topics.map(topic => {
+                    const isCompleted = completedTopics.has(topic.id);
+                    return `
+                        <div class="topic-item ${isCompleted ? 'completed' : ''}">
+                            <input 
+                                type="checkbox" 
+                                class="topic-checkbox" 
+                                id="checkbox-${topic.id}"
+                                data-topic-id="${topic.id}"
+                                ${isCompleted ? 'checked' : ''}
+                                aria-label="Mark ${topic.name} as completed"
+                            >
+                            <label class="topic-label" for="checkbox-${topic.id}">${topic.name}</label>
+                        </div>
+                    `;
+                }).join('');
+
+                return `
+                    <div class="section-card" data-section-card="${section.id}">
+                        <div class="section-header" role="button" tabindex="0" aria-expanded="false" aria-controls="section-${section.id}">
+                            <div class="section-info">
+                                <div class="section-number">0${section.id}</div>
+                                <div class="section-name">${section.name}</div>
+                                <div class="section-stats">${stats.completed} / ${stats.total} completed (${stats.percentage}%)</div>
+                                <div class="section-progress-bar">
+                                    <div class="section-progress-bar-fill" style="width: ${stats.percentage}%"></div>
+                                </div>
+                            </div>
+                            <div class="section-chevron">▼</div>
+                        </div>
+                        <div class="section-topics" id="section-${section.id}">
+                            ${topicsHtml}
+                        </div>
+                    </div>
+                `;
+            }).join('');
+
+            attachSyllabusEventListeners();
+        }
+
+        function attachSyllabusEventListeners() {
+            document.querySelectorAll('.section-header').forEach(header => {
+                header.addEventListener('click', (e) => {
+                    const card = header.closest('.section-card');
+                    card.classList.toggle('expanded');
+                    header.setAttribute('aria-expanded', card.classList.contains('expanded'));
+                });
+
+                header.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        header.click();
+                    }
+                });
+            });
+
+            document.querySelectorAll('.topic-checkbox').forEach(checkbox => {
+                checkbox.addEventListener('change', (e) => {
+                    const topicId = e.target.getAttribute('data-topic-id');
+                    if (e.target.checked) {
+                        completedTopics.add(topicId);
+                    } else {
+                        completedTopics.delete(topicId);
+                    }
+                    saveProgress();
+                    updateAllProgress();
+                    applyFilters();
+                });
+            });
+        }
+
+        function applyFilters() {
+            const query = document.getElementById('search-input').value.toLowerCase();
+            const filter = currentFilter;
+            const sections = document.querySelectorAll('.section-card');
+            let hasVisibleTopics = false;
+
+            sections.forEach(section => {
+                const topics = section.querySelectorAll('.topic-item');
+                let visibleCount = 0;
+
+                topics.forEach(topic => {
+                    const topicText = topic.querySelector('.topic-label').textContent.toLowerCase();
+                    const topicId = topic.querySelector('.topic-checkbox').getAttribute('data-topic-id');
+                    const isCompleted = completedTopics.has(topicId);
+                    const matchesSearch = topicText.includes(query);
+
+                    let matches = true;
+                    if (filter === 'completed') matches = isCompleted;
+                    if (filter === 'pending') matches = !isCompleted;
+
+                    if (matchesSearch && matches) {
+                        topic.style.display = '';
+                        visibleCount++;
+                        hasVisibleTopics = true;
+                    } else {
+                        topic.style.display = 'none';
+                    }
+                });
+
+                if (visibleCount > 0) {
+                    section.style.display = '';
+                } else {
+                    section.style.display = 'none';
+                }
+            });
+
+            document.getElementById('search-empty').style.display = hasVisibleTopics ? 'none' : '';
+        }
+
+        function switchView(viewName) {
+            document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
+            document.getElementById(viewName).classList.add('active');
+
+            document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('active'));
+            document.querySelector(`[data-view="${viewName}"]`).classList.add('active');
+        }
+
+        function resetProgress() {
+            completedTopics.clear();
+            saveProgress();
+            updateAllProgress();
+            renderSyllabus();
+            applyFilters();
+            closeModal();
+        }
+
+        function openModal() {
+            document.getElementById('reset-modal').classList.add('active');
+        }
+
+        function closeModal() {
+            document.getElementById('reset-modal').classList.remove('active');
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            loadProgress();
+
+            renderDashboard();
+            renderSyllabus();
+            updateProgressView();
+            updateAllProgress();
+
+            document.querySelectorAll('.nav-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    switchView(btn.getAttribute('data-view'));
+                });
+            });
+
+            document.getElementById('search-input').addEventListener('input', (e) => {
+                applyFilters();
+            });
+
+            document.querySelectorAll('[data-filter]').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    document.querySelectorAll('[data-filter]').forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    currentFilter = btn.getAttribute('data-filter');
+                    applyFilters();
+                });
+            });
+
+            document.getElementById('expand-all-btn').addEventListener('click', () => {
+                document.querySelectorAll('.section-card').forEach(card => {
+                    card.classList.add('expanded');
+                    card.querySelector('.section-header').setAttribute('aria-expanded', 'true');
+                });
+            });
+
+            document.getElementById('collapse-all-btn').addEventListener('click', () => {
+                document.querySelectorAll('.section-card').forEach(card => {
+                    card.classList.remove('expanded');
+                    card.querySelector('.section-header').setAttribute('aria-expanded', 'false');
+                });
+            });
+
+            document.getElementById('reset-btn').addEventListener('click', openModal);
+            document.getElementById('modal-cancel').addEventListener('click', closeModal);
+            document.getElementById('modal-confirm').addEventListener('click', resetProgress);
+
+            document.getElementById('reset-modal').addEventListener('click', (e) => {
+                if (e.target.id === 'reset-modal') closeModal();
+            });
+
+            if ('serviceWorker' in navigator) {
+                navigator.serviceWorker.register('/GATE-BIOTECH-TRACKER/service-worker.js').catch(err => {
+                    console.log('Service Worker registration failed:', err);
+                });
+            }
+        });
+
+        window.addEventListener('load', () => {
+            const stats = getStats();
+            console.log('✓ GATE Biotech App Loaded');
+            console.log(`✓ Sections: ${SYLLABUS_DATA.length} (expected 6)`);
+            console.log(`✓ Topics: ${stats.total} (expected 143)`);
+        });
+    </script>
+</body>
+</html>
