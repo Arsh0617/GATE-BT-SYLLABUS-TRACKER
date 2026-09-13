@@ -1,6 +1,6 @@
 {
   "name": "GATE 2027 Biotechnology — Syllabus Tracker",
-  "short_name": "GATE BT Tracker",
+  "short_name": "GATE BioTech",
   "description": "GATE 2027 Biotechnology syllabus checklist with local progress tracking.",
   "start_url": "./index.html",
   "scope": "./",
